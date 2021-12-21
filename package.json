@@ -1,0 +1,23 @@
+{
+  "name": "visualia3",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.0.0",
+    "@types/react": "file:src/types",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "vitepress": "^0.20.9",
+    "vue-tsc": "^0.29.8"
+  }
+}
