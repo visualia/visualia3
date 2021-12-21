@@ -2,11 +2,13 @@
 const y = $ref(20)
 </script>
 
-# Hello VitePress
+# Hello VitePress!
 
 <v-test>Hello y: {{ y }}</v-test>
 
 <input type="range" v-model="y" />
+
+<v-slider v-model="y" />
 
 ```md
 # Hello
@@ -14,4 +16,6 @@ const y = $ref(20)
 <v-test>Hello y: {{ y }}</v-test>
 
 <input type="range" v-model="y" />
+
+<v-slider v-model="y" />
 ```
