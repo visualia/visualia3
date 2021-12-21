@@ -1,3 +1,21 @@
+# Hello VitePress!
+
+<v-test>Hello y: {{ v.y }}</v-test>
+
+<input type="range" v-model="v.y" />
+
+<v-slider v-model="v.y" />
+
+```md
+# Hello
+
+<v-test>Hello y: {{ v.y }}</v-test>
+
+<input type="range" v-model="v.y" />
+
+<v-slider v-model="v.y" />
+```
+
 <script setup>
 const y = $ref(20)
 </script>
