@@ -31,11 +31,30 @@ function VisualiaMarkdownIt(md) {
   return md;
 }
 
+const sidebar = [
+  {
+    text: "Guide",
+    children: [
+      { text: "Intro", link: "/guide/intro" },
+      { text: "More", link: "/guide/more" },
+    ],
+  },
+];
+
 export default defineConfig({
   vue: { reactivityTransform: true },
   markdown: {
     //@ts-ignore
     breaks: true,
     config: (md) => md.use(VisualiaMarkdownIt),
+  },
+  themeConfig: {
+    repo: "visualia/visualia3",
+    docsDir: "docs",
+    editLinks: true,
+    editLinkText: "Page source",
+    sidebar: {
+      "/": sidebar,
+    },
   },
 });

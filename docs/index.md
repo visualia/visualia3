@@ -1,39 +1,12 @@
-# Hello VitePress!
-
-<v-test>Hello y: {{ v.y }}</v-test>
-
-<input type="range" v-model="v.y" />
-
-<v-slider v-model="v.y" />
-
-```md
-# Hello
-
-<v-test>Hello y: {{ v.y }}</v-test>
-
-<input type="range" v-model="v.y" />
-
-<v-slider v-model="v.y" />
-```
-
-<script setup>
-const y = $ref(20)
-</script>
-
-# Hello VitePress!
-
-<v-test>Hello y: {{ y }}</v-test>
-
-<input type="range" v-model="y" />
-
-<v-slider v-model="y" />
-
-```md
-# Hello
-
-<v-test>Hello y: {{ y }}</v-test>
-
-<input type="range" v-model="y" />
-
-<v-slider v-model="y" />
-```
+---
+title: Visualia
+home: true
+sidebar: true
+heroText: Visualia
+tagline: Create interactive learning experiences in the browser
+actionText: Intro
+actionLink: /guide/intro
+altActionText: More
+altActionLink: /guide/more
+footer: MIT Licensed
+---
