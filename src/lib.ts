@@ -1,8 +1,10 @@
 import { Plugin } from "vue";
-import Test from "./components/Test.vue";
+import VTest from "./components/VTest.vue";
+import VSlider from "./components/VSlider.vue";
 
 export const Visualia: Plugin = {
   install: (app) => {
-    app.component("Test", Test);
+    app.component("VTest", VTest);
+    app.component("VSlider", VSlider);
   },
 };

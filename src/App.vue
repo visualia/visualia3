@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Test from "./components/Test.vue";
+import VTest from "./components/VTest.vue";
 const x = $ref(10);
 </script>
 
 <template>
-  <Test>Hello x: {{ x }}</Test>
+  <v-test>Hello x: {{ x }}</v-test>
   <input type="range" v-model="x" />
 </template>

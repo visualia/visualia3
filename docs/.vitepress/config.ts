@@ -21,9 +21,11 @@ function VisualiaMarkdownIt(md) {
   md.renderer.rules.html_block = function () {
     const [tokens, idx, _options, _env, _slf] = arguments;
 
-    return String(tokens[idx].content).startsWith("<v-")
-      ? `<p>${defaultHtmlBlock(...arguments)}</p>`
-      : defaultHtmlBlock(...arguments);
+    // return String(tokens[idx].content).startsWith("<v-")
+    //   ? `<p>${defaultHtmlBlock(...arguments)}</p>`
+    //   : defaultHtmlBlock(...arguments);
+
+    return defaultHtmlBlock(...arguments);
   };
 
   return md;

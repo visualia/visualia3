@@ -4,10 +4,14 @@ const y = $ref(20)
 
 # Hello VitePress
 
-<Test>Hello y: {{ y }}</Test>
+<v-test>Hello y: {{ y }}</v-test>
 
 <input type="range" v-model="y" />
 
 ```md
-{{ y }}
+# Hello
+
+<v-test>Hello y: {{ y }}</v-test>
+
+<input type="range" v-model="y" />
 ```
