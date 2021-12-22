@@ -57,6 +57,7 @@ export default defineConfig({
             { text: "Vitepress", link: "get-started/vitepress" },
             { text: "ESM in HTML", link: "get-started/esm" },
             { text: "Globals in HTML", link: "get-started/global" },
+            { text: "Node", link: "get-started/node" },
           ],
         },
       ],

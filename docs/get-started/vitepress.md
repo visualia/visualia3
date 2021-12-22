@@ -22,13 +22,13 @@ npm run dev
 
 ### 🅓 Modify existing Vitepress installation
 
-It is easy to modify Vitepress installation to support Visualia. First, install the latest versions of vitepress and Visualia:
+It is easy to modify Vitepress installation to support Visualia. First, install Visualia:
 
 ```bash
-npm install vitepress@latest visualia3
+npm install visualia3
 ```
 
-Then, edit `config.js` as follows to install Visualia Vue plugin and import the styles:
+Then, edit `config.js` as follows to install Visualia plugin for Vue and import the Visualia styles:
 
 ```js{4-5,10}
 // ./docs/.vitepress/theme/index.js
@@ -45,7 +45,8 @@ export default {
 };
 ```
 
-It is also recommended to support Vue's upcoming reactivity transforms, an upcoming syntax for reactive variables. It is not required to use Visualia but we use `$ref()`, `$computed()` etc in several places the documentation.
+It is also recommended to support Vue's upcoming reactivity
+transforms, an upcoming syntax for reactive variables.
 
 Modify the `config.js` as follows:
 
@@ -60,4 +61,10 @@ export default defineConfig({
 });
 ```
 
-You can now (finally) start to use Visualia components, utility functions and state in your Markup documents.
+:::info
+
+Reactivity transforms are not _required_ to use Visualia, but a lot of documentation refers to this syntax.
+
+:::
+
+You can now start to use Visualia components, utility functions and state in your Markup documents.
