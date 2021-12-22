@@ -1,13 +1,12 @@
-<script setup>
-const y = $ref(20)
-</script>
-
-# Hello VitePress
-
-<Test>Hello y: {{ y }}</Test>
-
-<input type="range" v-model="y" />
-
-```md
-{{ y }}
-```
+---
+title: Visualia
+home: true
+sidebar: true
+heroText: Visualia
+tagline: Create interactive learning experiences in the browser
+actionText: Intro
+actionLink: /guide/intro
+altActionText: More
+altActionLink: /guide/more
+footer: MIT Licensed
+---
