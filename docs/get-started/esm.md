@@ -1,4 +1,4 @@
-# ESM modules and Vite
+# ESM imports
 
 The most bare-bones way to use Visualia is to import VueJS and Visualia into a single HTML file.
 

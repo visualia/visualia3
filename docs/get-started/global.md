@@ -1,4 +1,4 @@
-# Global Javascript
+# Global inclusion
 
 For "classic" Javascript usage Visualia also provides a globally loadable UMD package https://unpkg.com/visualia3/dist/visualia.umd.js
 
