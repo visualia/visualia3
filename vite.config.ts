@@ -5,9 +5,10 @@ import path from "path";
 const build: Record<string, BuildOptions> = {
   production: null,
   es: {
+    emptyOutDir: false,
     lib: {
       formats: ["es"],
-      entry: path.resolve(__dirname, "src/lib.ts"),
+      entry: path.resolve(__dirname, "src/lib.es.ts"),
       name: "visualia",
       fileName: (format) => {
         return {
@@ -25,9 +26,10 @@ const build: Record<string, BuildOptions> = {
     },
   },
   cjs: {
+    emptyOutDir: false,
     lib: {
       formats: ["cjs", "umd"],
-      entry: path.resolve(__dirname, "src/lib.ts"),
+      entry: path.resolve(__dirname, "src/lib.cjs.ts"),
       name: "visualia",
       fileName: (format) => {
         return {

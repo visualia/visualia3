@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { watchEffect } from "vue";
-import { v } from "./lib";
+import { v } from "./lib.es";
 
 const x = $ref(10);
 watchEffect(() => (v.x = x));
