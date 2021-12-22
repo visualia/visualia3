@@ -2,12 +2,12 @@
   "name": "visualia3",
   "version": "0.0.1",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview",
-    "docs:dev": "vitepress dev docs",
+    "dev": "vite --port 3000 --host",
+    "build": "vite build",
+    "preview": "vite preview --port 5000",
+    "docs:dev": "vitepress dev docs --port 3001 --host",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:preview": "vitepress serve docs --port 5001"
   },
   "dependencies": {
     "vue": "^3.2.25"

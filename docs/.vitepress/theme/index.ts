@@ -1,5 +1,5 @@
 import DefaultTheme from "vitepress/theme";
-import { Visualia } from "../../../src";
+import { Visualia } from "../../../src/lib";
 
 export default {
   ...DefaultTheme,
