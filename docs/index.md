@@ -16,7 +16,7 @@ There are several ways to get started with Vitepress and Visualia:
 
 Run the following commands:
 
-```sh
+```bash
 npx degit visualia/visualia-vitepress
 npm install
 npm run dev
@@ -24,16 +24,16 @@ npm run dev
 
 #### 🅓 Modify existing Vitepress installation
 
-It is easy to modify Vitepress installation to support Visualia. First, install Visualia:
+It is easy to modify Vitepress installation to support Visualia. First, install the latest versions of vitepress and Visualia:
 
 ```bash
-npm install visualia3
+npm install vitepress@latest visualia3
 ```
 
 Then, edit `config.js` as follows to install Visualia Vue plugin and import the styles:
 
 ```js{4-5,10}
-// ./docs/.vitepress/config.js
+// ./docs/.vitepress/theme/index.js
 
 import DefaultTheme from "vitepress/theme";
 import { Visualia } from "visualia3";
@@ -45,4 +45,19 @@ export default {
     app.use(Visualia);
   },
 };
+```
+
+It is also recommended to support Vue's upcoming reactivity transforms, an upcoming syntax for reactive variables. It is not required to use Visualia but we use `$ref()`, `$computed()` etc in several places the documentation.
+
+Modify the `config.js` as follows:
+
+```js{6}
+// ./docs/.vitepress/config.js
+
+import { defineConfig } from "vitepress";
+
+export default defineConfig({
+  vue: { reactivityTransform: true },
+  // ...rest of the config...
+});
 ```
