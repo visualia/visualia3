@@ -1,10 +1,10 @@
-# Vitepress
+# Vitepress and Visualia
 
 There are several ways to get started with Vitepress and Visualia:
 
-### 🅐 Run Slackblitz in your browser
+### 🅐 Use Slackblitz
 
-[Open the sample project in Stackblitz](https://stackblitz.com/github/visualia/visualia-vitepress) and start editing the project right in your browser.
+[Open Vitepress + Visualia sample project in Stackblitz](https://stackblitz.com/github/visualia/visualia-vitepress?file=docs%2Findex.md) and start editing the project right in the browser.
 
 ### 🅑 Use Github template
 

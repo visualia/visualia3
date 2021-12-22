@@ -53,6 +53,7 @@ export default defineConfig({
               text: "Introduction",
               link: "/",
             },
+            { text: "Vite", link: "get-started/vite" },
             { text: "Vitepress", link: "get-started/vitepress" },
           ],
         },
