@@ -1,6 +1,6 @@
 {
   "name": "visualia3",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "node": "^14.13.1 || >=16.0.0"
   },
@@ -25,6 +25,10 @@
     ".": {
       "import": "./dist/visualia.js",
       "require": "./dist/visualia.cjs.js"
+    },
+    "./style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
     }
   },
   "typings": "./dist/lib.es.ts",
