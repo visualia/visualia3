@@ -27,6 +27,7 @@
       "require": "./dist/visualia.cjs.js"
     }
   },
+  "typings": "./dist/lib.es.ts",
   "scripts": {
     "dev": "vite --port 3000 --host",
     "build": "vite build && vite build --mode es && vite build --mode cjs",
