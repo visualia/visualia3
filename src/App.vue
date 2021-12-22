@@ -7,6 +7,7 @@ watchEffect(() => (v.x = x));
 </script>
 
 <template>
+  <v-math>x = 1!</v-math>
   <v-test>Hello x: {{ x }}</v-test>
   <v-slider v-model="x" />
   <br />
