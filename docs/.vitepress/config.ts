@@ -47,8 +47,14 @@ export default defineConfig({
     sidebar: {
       "/": [
         {
-          text: "Guide",
-          children: [{ text: "Get started", link: "/" }],
+          text: "Get started",
+          children: [
+            {
+              text: "Introduction",
+              link: "/",
+            },
+            { text: "Vitepress", link: "get-started/vitepress" },
+          ],
         },
       ],
     },
