@@ -1,6 +1,6 @@
 {
   "name": "visualia3",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "node": "^14.13.1 || >=16.0.0"
   },
@@ -19,12 +19,13 @@
     "dist",
     "src"
   ],
-  "main": "./dist/visualia.cjs.js",
+  "type": "module",
+  "main": "./dist/visualia.cjs",
   "module": "./dist/visualia.js",
   "exports": {
     ".": {
       "import": "./dist/visualia.js",
-      "require": "./dist/visualia.cjs.js"
+      "require": "./dist/visualia.cjs"
     },
     "./style.css": {
       "import": "./dist/style.css",
@@ -41,10 +42,11 @@
     "docs:preview": "vitepress serve docs --port 5001",
     "test": "vitest",
     "typecheck": "vue-tsc --noEmit",
-    "prerelease": "vitest --run && npm run build && vue-tsc --declaration --emitDeclarationOnly"
+    "prepublish": "vitest --run && npm run build && vue-tsc --declaration --emitDeclarationOnly"
   },
   "dependencies": {
     "katex": "^0.15.1",
+    "visualia3": "^0.0.3",
     "vue": "^3.2.25"
   },
   "devDependencies": {
