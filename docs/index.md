@@ -61,3 +61,5 @@ export default defineConfig({
   // ...rest of the config...
 });
 ```
+
+You can now (finally) start to use Visualia components, utility functions and state in your Markup documents.
