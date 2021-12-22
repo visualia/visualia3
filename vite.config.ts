@@ -33,7 +33,7 @@ const build: Record<string, BuildOptions> = {
       name: "visualia",
       fileName: (format) => {
         return {
-          cjs: "visualia.cjs",
+          cjs: "visualia.cjs.js",
           umd: "visualia.umd.js",
         }[format];
       },

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "vite --port 3000 --host",
-    "build": "vite build",
+    "build": "vite build && vite build --mode es && vite build --mode cjs",
     "preview": "vite preview --port 5000",
     "docs:dev": "vitepress dev docs --port 3001 --host",
     "docs:build": "vitepress build docs",
