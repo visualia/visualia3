@@ -31,17 +31,8 @@ function VisualiaMarkdownIt(md) {
   return md;
 }
 
-const sidebar = [
-  {
-    text: "Guide",
-    children: [
-      { text: "Intro", link: "/guide/intro" },
-      { text: "More", link: "/guide/more" },
-    ],
-  },
-];
-
 export default defineConfig({
+  title: "Visualia",
   vue: { reactivityTransform: true },
   markdown: {
     //@ts-ignore
@@ -54,7 +45,12 @@ export default defineConfig({
     editLinks: true,
     editLinkText: "Page source",
     sidebar: {
-      "/": sidebar,
+      "/": [
+        {
+          text: "Guide",
+          children: [{ text: "Get started", link: "/" }],
+        },
+      ],
     },
   },
 });
