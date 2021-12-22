@@ -7,17 +7,19 @@
     "preview": "vite preview --port 5000",
     "docs:dev": "vitepress dev docs --port 3001 --host",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress serve docs --port 5001"
+    "docs:preview": "vitepress serve docs --port 5001",
+    "test": "vitest"
   },
   "dependencies": {
     "vue": "^3.2.25"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^2.0.0",
     "@types/react": "file:src/types",
+    "@vitejs/plugin-vue": "^2.0.0",
     "typescript": "^4.4.4",
     "vite": "^2.7.2",
     "vitepress": "^0.20.9",
+    "vitest": "^0.0.107",
     "vue-tsc": "^0.29.8"
   }
 }
