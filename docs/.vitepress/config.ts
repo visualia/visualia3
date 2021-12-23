@@ -47,17 +47,23 @@ export default defineConfig({
     sidebar: {
       "/": [
         {
-          text: "Get started",
+          text: "Guide",
           children: [
             {
               text: "Introduction",
               link: "/",
             },
-            { text: "Vite", link: "get-started/vite" },
-            { text: "Vitepress", link: "get-started/vitepress" },
-            { text: "ESM in HTML", link: "get-started/esm" },
-            { text: "Globals in HTML", link: "get-started/global" },
-            { text: "Node", link: "get-started/node" },
+            {
+              text: "Get Started",
+              children: [
+                { text: "Vite", link: "guide/get-started/vite" },
+                { text: "Vitepress", link: "guide/get-started/vitepress" },
+                { text: "JS module ", link: "guide/get-started/esm" },
+                { text: "JS global", link: "guide/get-started/global" },
+                { text: "Node", link: "guide/get-started/node" },
+                { text: "Deno", link: "guide/get-started/deno" },
+              ],
+            },
           ],
         },
       ],

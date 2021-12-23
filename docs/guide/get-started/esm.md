@@ -1,4 +1,4 @@
-# ESM in HTML
+# Javascript module in HTML
 
 The most bare-bones way to use Visualia is to import VueJS and Visualia into a single HTML file.
 

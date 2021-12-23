@@ -1,4 +1,4 @@
-# Globals in HTML
+# Global Javascript in HTML
 
 For "classic" Javascript usage Visualia also provides a globally loadable UMD package https://unpkg.com/visualia3/dist/visualia.umd.js
 
