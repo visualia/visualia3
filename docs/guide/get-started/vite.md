@@ -4,7 +4,9 @@ There are multiple ways to get started with Vite and Visualia:
 
 ### 🅐 Use Slackblitz
 
-[Open Vite + Visualia project in Stackblitz](https://stackblitz.com/github/visualia/visualia-vite?file=src%2Findex.md) and start editing the project right in the browser.
+[![](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/visualia/visualia-vite?file=src%2Findex.md)
+
+Open Vite + Visualia project in Stackblitz and start editing the project right in the browser.
 
 ### 🅑 Use Github template
 

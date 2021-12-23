@@ -4,7 +4,9 @@ There are several ways to get started with Vitepress and Visualia:
 
 ### 🅐 Use Slackblitz
 
-[Open Vitepress + Visualia sample project in Stackblitz](https://stackblitz.com/github/visualia/visualia-vitepress?file=docs%2Findex.md) and start editing the project right in the browser.
+[![](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/visualia/visualia-vitepress?file=docs%2Findex.md)
+
+Open Vitepress + Visualia sample project in Stackblitz and start editing the project right in the browser.
 
 ### 🅑 Use Github template
 

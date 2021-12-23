@@ -58,6 +58,7 @@ export default defineConfig({
               children: [
                 { text: "Vite", link: "guide/get-started/vite" },
                 { text: "Vitepress", link: "guide/get-started/vitepress" },
+                { text: "Slidev", link: "guide/get-started/slidev" },
                 { text: "JS module ", link: "guide/get-started/esm" },
                 { text: "JS global", link: "guide/get-started/global" },
                 { text: "Node", link: "guide/get-started/node" },
