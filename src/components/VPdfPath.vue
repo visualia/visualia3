@@ -13,8 +13,7 @@ watch(
       context.page.value.drawSvgPath(path, {
         x: 0,
         y: context.height,
-        borderWidth: 2,
-        borderColor: { red: 1, green: 0, blue: 0, type: ColorTypes.RGB },
+        borderColor: { red: 0, green: 0, blue: 0, type: ColorTypes.RGB },
         opacity: 0.5,
       });
       context.update();

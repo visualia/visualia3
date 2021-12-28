@@ -21,5 +21,10 @@ if (slots && slots.default) {
 </script>
 
 <template>
-  <span v-if="math" v-html="math" />
+  <span v-if="math" v-html="math" />{{
+    linepath([
+      { x: 0, y: 0 },
+      { x: 10, y: 10 },
+    ])
+  }}
 </template>

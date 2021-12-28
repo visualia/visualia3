@@ -85,6 +85,10 @@ export default defineConfig({
               text: "Color",
               children: [{ text: "hsl", link: "/utils/color/hsl" }],
             },
+            {
+              text: "Path",
+              children: [{ text: "linepath", link: "/utils/path/linepath" }],
+            },
           ],
         },
       ],

@@ -2,8 +2,8 @@
 import { ref, Ref, provide } from "vue";
 import { PDFDocument, PDFPage } from "pdf-lib";
 
-const width = 200;
-const height = 200;
+const width = 100;
+const height = 100;
 
 export type Context = {
   pdf: Ref<PDFDocument | null>;
