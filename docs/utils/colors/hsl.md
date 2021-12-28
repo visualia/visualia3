@@ -91,3 +91,9 @@ Hover or tap over the colors to see how `a` value changes
 # hsla
 
 `hsla()` is an alias to `hsl()`.
+
+## Prior art
+
+https://designstem.github.io/fachwerk/docs/#/hsl
+
+https://visualia.github.io/visualia_original/#helper-functions_hsl
