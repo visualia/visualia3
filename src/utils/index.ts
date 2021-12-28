@@ -1,3 +1,3 @@
 export * from "./color";
-export * from "./math";
+export * from "./array";
 export * from "./v";
