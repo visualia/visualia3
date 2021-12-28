@@ -3,38 +3,23 @@
 Ouputs a CSS color string in [hsl() notation](<https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl()>).
 
 ```js
-/*
- * @param h Hue value from 0 to 360 (can be more)
- * @param s Saturation value from 0 to 100
- * @param l Lightness value from 0 to 100, defaults to 50
- * @param a Alpha value from 0 to 1, defaults to 1
- *
- * @returns {string} CSS hsla() string value
- */
 export function hsl(h = 0, s = 100, l = 50, a = 1)
 ```
 
-### Usage
+`@TODO props`
+
+## Usage
 
 The main use case for the function is to calculate dynamic color values in Vue components.
-
-#### Usage in setup
-
-```vue
-<script setup>
-const h = $ref(0);
-const fill = $computed(() => hsl(h));
-</script>
-```
 
 #### Usage in template, hue value
 
 ```md
 Hover or tap over the colors to see how `h` value changes
 
-<v-svg width="360" height="100">
+<svg width="360" height="100">
   <rect v-for="h in range(0,360)" :x="h" y="0" width="1" height="100" :fill="hsl(h,100,50)" v-on:mouseover="v.h = h" />
-</v-svg>
+</svg>
 
 > `hsl({{ v.h ?? 0 }},100,50)`
 ```
@@ -98,6 +83,10 @@ Hover or tap over the colors to see how `a` value changes
 
 > `hsl(0,100,50,{{ v.a ?? 0 }})`
 ```
+
+#### Usage in setup
+
+`@TODO`
 
 # hsla
 
