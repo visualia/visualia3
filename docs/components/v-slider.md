@@ -10,7 +10,7 @@
 
 Here we assign slider value to a global variable `v.x` where `v` is predefined but `x` can be any string as long it only contains letters, numbers or underscore. Global variables are available on each page so make sure you name your variables in a way that they do not conflict with each other.
 
-To output the value you can use double curly braces <v-pre>{{ }}</v-pre>.
+To output the value you can use double curly braces `{{ }}`.
 
 ```md
 > The value of x is {{ v.x }}

@@ -78,8 +78,12 @@ export default defineConfig({
           text: "Utilities",
           children: [
             {
-              text: "Colors",
-              children: [{ text: "hsl", link: "/utils/colors/hsl" }],
+              text: "Array",
+              children: [{ text: "range", link: "/utils/array/range" }],
+            },
+            {
+              text: "Color",
+              children: [{ text: "hsl", link: "/utils/color/hsl" }],
             },
           ],
         },

@@ -10,7 +10,25 @@ export function hsl(h = 0, s = 100, l = 50, a = 1)
 
 ## Usage
 
-The main use case for the function is to calculate dynamic color values in Vue components.
+Output a CSS color string with `h s l a` parameters:
+
+```md
+`{{ hsl(10,20,30,0.1) }}`
+```
+
+Note that `s l a` parameters can be omitted, so you can set only the hue `h` value, the rest will have the default values.
+
+```md
+`{{ hsl(10) }}`
+```
+
+::: warning Not in a spec
+`hsl(hue)` is not part of the official CSS colors specification, it is provided as a convenience feature by Visualia.
+:::
+
+## Examples
+
+The main use case for the function is to calculate and format dynamic CSS color values.
 
 #### Usage in template, hue value
 
