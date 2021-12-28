@@ -67,6 +67,22 @@ export default defineConfig({
             },
           ],
         },
+        {
+          text: "Components",
+          children: ["slider", "math"].map((c) => ({
+            text: `v-${c}`,
+            link: `/components/v-${c}`,
+          })),
+        },
+        {
+          text: "Utilities",
+          children: [
+            {
+              text: "Colors",
+              children: [{ text: "hsl", link: "/utils/colors/hsl" }],
+            },
+          ],
+        },
       ],
     },
   },
