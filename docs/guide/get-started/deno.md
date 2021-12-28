@@ -1,6 +1,8 @@
 # Deno and Visualia
 
-For Deno, it makes sense to use Visualia's Typescript-based source files. Create `index.ts` as follows:
+For Deno, it is recommended to use Visualia's Typescript-based source files.
+
+Create `index.ts` as follows:
 
 ```ts
 // index.ts
