@@ -69,7 +69,7 @@ export default defineConfig({
         },
         {
           text: "Components",
-          children: ["slider", "math"].map((c) => ({
+          children: ["slider", "math", "pdf"].map((c) => ({
             text: `v-${c}`,
             link: `/components/v-${c}`,
           })),
