@@ -87,7 +87,16 @@ export default defineConfig({
             },
             {
               text: "Path",
-              children: [{ text: "linepath", link: "/utils/path/linepath" }],
+              children: [
+                { text: "linepath", link: "/utils/path/linepath" },
+                { text: "circlepath", link: "/utils/path/circlepath" },
+              ],
+            },
+            {
+              text: "Point",
+              children: [
+                { text: "rectpoints", link: "/utils/point/rectpoints" },
+              ],
             },
           ],
         },
