@@ -30,8 +30,9 @@ function rectpoints(
     v-for="point in rectpoints(10, 20, 30, 40)"
     :cx="point.x"
     :cy="point.y"
-    r="2"
-    fill="red"
+    r="5"
+    stroke="red"
+    fill="none"
   />
   <rect x="10" y="20" width="30" height="40" stroke="black" fill="none" />
 </svg>

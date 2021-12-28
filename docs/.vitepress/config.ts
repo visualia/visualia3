@@ -69,7 +69,7 @@ export default defineConfig({
         },
         {
           text: "Components",
-          children: ["slider", "math", "pdf"].map((c) => ({
+          children: ["slider", "math"].map((c) => ({
             text: `v-${c}`,
             link: `/components/v-${c}`,
           })),
@@ -86,17 +86,26 @@ export default defineConfig({
               children: [{ text: "hsl", link: "/utils/color/hsl" }],
             },
             {
+              text: "Point",
+              children: [
+                { text: "rectpoints", link: "/utils/point/rectpoints" },
+              ],
+            },
+            {
               text: "Path",
               children: [
                 { text: "linepath", link: "/utils/path/linepath" },
                 { text: "circlepath", link: "/utils/path/circlepath" },
               ],
             },
+          ],
+        },
+        {
+          text: "Experiments",
+          children: [
             {
-              text: "Point",
-              children: [
-                { text: "rectpoints", link: "/utils/point/rectpoints" },
-              ],
+              text: "v-svg",
+              link: "/components/v-pdf",
             },
           ],
         },
