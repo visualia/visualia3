@@ -2,7 +2,7 @@
 
 `<v-slider />` is a component that changes a numeric variable with a slider. It is a lightweight wrapper around `<input type="range" />` HTML element.
 
-## Global usage
+## With global variable
 
 ```md
 <v-slider v-model="v.x" />
@@ -24,7 +24,7 @@ You can use that variable to control the SVG `<circle />` position on the page (
 </svg>
 ```
 
-## Local usage
+## With local variable
 
 If you want to use a local variable, only available in the current page, you will need to create a `<script setup>` section:
 
@@ -71,3 +71,8 @@ Note that step attribute can also be set to `step="any"` that makes slider to em
 
 > The value of x3 is <br /> {{ v.x3 }}
 ```
+
+## Prior art
+
+https://designstem.github.io/fachwerk/docs/#/f-slider
+https://visualia.github.io/visualia_original/#live-variables_slider
