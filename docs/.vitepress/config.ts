@@ -85,6 +85,28 @@ export default defineConfig({
               text: "Color",
               children: [{ text: "hsl", link: "/utils/color/hsl" }],
             },
+            {
+              text: "Point",
+              children: [
+                { text: "rectpoints", link: "/utils/point/rectpoints" },
+              ],
+            },
+            {
+              text: "Path",
+              children: [
+                { text: "linepath", link: "/utils/path/linepath" },
+                { text: "circlepath", link: "/utils/path/circlepath" },
+              ],
+            },
+          ],
+        },
+        {
+          text: "Experiments",
+          children: [
+            {
+              text: "v-svg",
+              link: "/components/v-pdf",
+            },
           ],
         },
       ],
