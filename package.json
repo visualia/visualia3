@@ -47,6 +47,8 @@
   "dependencies": {
     "katex": "^0.15.1",
     "pdf-lib": "^1.17.1",
+    "svg-path-bounds": "^1.0.2",
+    "svgpath": "^2.4.0",
     "visualia3": "^0.0.3",
     "vue": "^3.2.25"
   },
