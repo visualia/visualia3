@@ -35,17 +35,17 @@ renderer.setSize(width, height);
 
 const update = () => renderer.render(scene, camera);
 
-const geometry = new BoxGeometry(20, 20, 20);
-const material = new MeshBasicMaterial({ color: "red" });
-const cube = new Mesh(geometry, material);
-scene.add(cube);
-cube.position.z = 0;
+// const geometry = new BoxGeometry(20, 20, 20);
+// const material = new MeshBasicMaterial({ color: "red" });
+// const cube = new Mesh(geometry, material);
+// scene.add(cube);
+// cube.position.z = 0;
 
-watch(
-  () => props.a,
-  () => cube.rotateZ(props.a / 5000),
-  { immediate: true }
-);
+// watch(
+//   () => props.a,
+//   () => cube.rotateZ(props.a / 5000),
+//   { immediate: true }
+// );
 
 //@ts-ignore
 const controls = new OrbitControls(camera, renderer.domElement);
