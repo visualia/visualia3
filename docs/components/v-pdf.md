@@ -1,11 +1,10 @@
-# Pdf
+# Canvas
 
-```md
-<v-pdf>
-  <v-pdf-path :path="linepath(rectpoints(10, 20, 30, 40), true)" />
-  <v-pdf-path
-    v-for="point in rectpoints(10, 20, 30, 40)"
-    :path="circlepath(point.x, point.y, 5)"
-  />
-</v-pdf>
-```
+<v-canvas>
+  <v-canvas-path :path="circlepath(v.x || 0, 20, 30)" :opacity="1" />
+  <v-canvas-path :path="linepath(rectpoints(20, 30, 30, 40), true)" :opacity="0.1" />
+</v-canvas>
+
+<br />
+
+<v-slider v-model="v.x" />
