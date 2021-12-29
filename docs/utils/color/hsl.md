@@ -2,8 +2,13 @@
 
 Ouputs a CSS color string in [hsl() notation](<https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl()>).
 
-```js
-export function hsl(h = 0, s = 100, l = 50, a = 1)
+```ts
+export function hsl(
+  h: number = 0,
+  s: number = 100,
+  l: number = 50,
+  a: number = 1
+): string;
 ```
 
 `@TODO props`
