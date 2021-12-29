@@ -104,8 +104,12 @@ export default defineConfig({
           text: "Experiments",
           children: [
             {
-              text: "v-svg",
+              text: "v-pdf",
               link: "/components/v-pdf",
+            },
+            {
+              text: "v-three",
+              link: "/components/v-three",
             },
           ],
         },
