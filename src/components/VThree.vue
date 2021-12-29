@@ -11,7 +11,7 @@ import {
 import {
   Scene,
   PerspectiveCamera,
-  // WebGLRenderer,
+  WebGLRenderer,
   BoxGeometry,
   MeshBasicMaterial,
   Mesh,
@@ -30,7 +30,14 @@ const scene = new Scene();
 const camera = new PerspectiveCamera(100, width / height, 0.1, 1000);
 camera.position.z = width / 2.38;
 
-const renderer = new SVGRenderer();
+//const renderer = new SVGRenderer();
+
+const renderer = new WebGLRenderer({
+  antialias: true,
+  alpha: true,
+});
+renderer.setPixelRatio(2);
+
 renderer.setSize(width, height);
 
 const update = () => renderer.render(scene, camera);
@@ -55,7 +62,7 @@ onBeforeUpdate(() => {
   update();
 });
 
-provide("context", { scene });
+provide("context", { scene, update });
 </script>
 
 <template>
