@@ -1,7 +1,11 @@
+<script setup>
+  import { BoxGeometry } from 'three'
+</script>
+
 # v-three
 
 <v-three :a="v.a">
-  <v-three-mesh />
+  <v-three-mesh :geometry="new BoxGeometry(20, 20, 1)" />
 </v-three>
 
 <v-slider v-model="v.a" max="360" step="any" />
