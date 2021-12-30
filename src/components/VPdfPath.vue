@@ -12,16 +12,13 @@ watch(
   () => {
     if (context.page.value && path) {
       let transformedPath = path;
-
+      let transforms = context.transforms;
       if (transform) {
-        context.transforms = [...context.transforms, transform];
-        context.transforms.forEach((t) => {
-          transformedPath = processPath(transformedPath)
-            .transform(t)
-            .toString();
-        });
+        transforms = [...context.transforms, transform];
       }
-
+      transforms.forEach((t) => {
+        transformedPath = processPath(transformedPath).transform(t).toString();
+      });
       context.page.value.drawSvgPath(transformedPath, {
         x: 0,
         y: context.height,

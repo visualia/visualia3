@@ -26,7 +26,7 @@ const context: Context = {
         .then((pdfSrc: string) => (src.value = pdfSrc));
     }
   },
-  transforms: ["translate(10,10)"],
+  transforms: ["translate(50,50)"],
 };
 
 const src = ref("");
