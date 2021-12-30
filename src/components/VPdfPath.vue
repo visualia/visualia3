@@ -1,16 +1,20 @@
 <script setup lang="ts">
 import { ColorTypes } from "pdf-lib";
 import { inject, watch } from "vue";
+import processPath from "svgpath";
 import type { Context } from "./VPdf.vue";
 
-const { path = "" } = defineProps(["path"]);
+const { path, transform = "" } = defineProps(["path", "transform"]);
 const context = inject("context") as Context;
 
 watch(
   context.pdf,
   () => {
-    if (context.page.value) {
-      context.page.value.drawSvgPath(path, {
+    if (context.page.value && path) {
+      const transformedPath = transform
+        ? processPath(path).transform(transform).toString()
+        : path;
+      context.page.value.drawSvgPath(transformedPath, {
         x: 0,
         y: context.height,
         borderColor: { red: 0, green: 0, blue: 0, type: ColorTypes.RGB },
