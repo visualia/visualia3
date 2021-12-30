@@ -13,11 +13,7 @@ import { circlepath } from "../utils";
 const context = inject("context", { scene: null, update: () => {} });
 
 function createPath() {
-  const svg = `<svg width="100" height="100"><path d="${circlepath(
-    0,
-    0,
-    30
-  )}"></path></svg>`;
+  const svg = `<path d="${circlepath(0, 0, 30)}"></path>`;
 
   const loader = new SVGLoader();
   const svgData = loader.parse(svg);
@@ -45,6 +41,8 @@ function createPath() {
   }
   return group;
 }
+
+// defineExpose({ group })
 
 watch(
   () => context.scene,
