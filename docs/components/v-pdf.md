@@ -3,7 +3,7 @@
 ```md
 <v-pdf>
   <v-pdf-path
-    :path="linepath(rectpoints(0, 0, 100, 100), true)" transform="rotate(10,50,50)"
+    :path="linepath(rectpoints(0, 0, 100, 100), true)" transform="translate(10,10)"
   />
 </v-pdf>
 ```

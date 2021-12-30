@@ -11,9 +11,17 @@ watch(
   context.pdf,
   () => {
     if (context.page.value && path) {
-      const transformedPath = transform
-        ? processPath(path).transform(transform).toString()
-        : path;
+      let transformedPath = path;
+
+      if (transform) {
+        context.transforms = [...context.transforms, transform];
+        context.transforms.forEach((t) => {
+          transformedPath = processPath(transformedPath)
+            .transform(t)
+            .toString();
+        });
+      }
+
       context.page.value.drawSvgPath(transformedPath, {
         x: 0,
         y: context.height,
