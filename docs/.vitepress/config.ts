@@ -107,6 +107,10 @@ export default defineConfig({
               text: "v-pdf",
               link: "/components/v-pdf",
             },
+            {
+              text: "v-three",
+              link: "/components/v-three",
+            },
           ],
         },
       ],
