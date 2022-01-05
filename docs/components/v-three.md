@@ -8,8 +8,8 @@
 <script setup>
   import { BoxGeometry } from 'three'
 </script>
-<v-three :a="v.a">
+<v-three>
   <v-three-mesh :geometry="new BoxGeometry(20, 20, 20)" />
-  <v-three-path />
+  <v-three-path :path="circlepath(0,0,20)" />
 </v-three>
 ```

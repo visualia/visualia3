@@ -12,8 +12,14 @@ import { circlepath } from "../utils";
 
 const context = inject("context", { scene: null, update: () => {} });
 
-function createPath() {
-  const svg = `<path d="${circlepath(0, 0, 30)}"></path>`;
+type Props = {
+  path: string;
+};
+
+const { path } = defineProps<Props>();
+
+function createPath(path: string): Group {
+  const svg = `<path d="${path}"></path>`;
 
   const loader = new SVGLoader();
   const svgData = loader.parse(svg);
@@ -48,9 +54,9 @@ watch(
   () => context.scene,
   () => {
     if (context.scene) {
-      const group = createPath();
+      const pathGroup = createPath(path);
       // @ts-ignore
-      context.scene.add(group);
+      context.scene.add(pathGroup);
       context.update();
     }
   },
