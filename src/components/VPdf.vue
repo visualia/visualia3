@@ -11,6 +11,7 @@ export type Context = {
   width: number;
   height: number;
   update: () => void;
+  transforms: string[];
 };
 
 const context: Context = {
@@ -25,6 +26,7 @@ const context: Context = {
         .then((pdfSrc: string) => (src.value = pdfSrc));
     }
   },
+  transforms: [], // @TODO Allow v-pdf transforms
 };
 
 const src = ref("");
