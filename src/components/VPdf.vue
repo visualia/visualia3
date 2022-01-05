@@ -26,7 +26,7 @@ const context: Context = {
         .then((pdfSrc: string) => (src.value = pdfSrc));
     }
   },
-  transforms: ["translate(50,50)"],
+  transforms: [], // @TODO Allow v-pdf transforms
 };
 
 const src = ref("");
