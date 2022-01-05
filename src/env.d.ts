@@ -9,3 +9,4 @@ declare module "*.vue" {
 }
 
 declare module "vitepress/theme";
+declare module "svg-path-bounds";
