@@ -7,6 +7,8 @@
     mesh.mesh.rotation.x = x / 180 * Math.PI
     mesh.update();
   })
+  // import { useRafFn as raf } from '@vueuse/core'
+  // raf(() => mesh?.update())
 </script>
 
 # v-three
