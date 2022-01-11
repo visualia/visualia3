@@ -61,7 +61,7 @@ watch(
   { immediate: true }
 );
 
-defineExpose({ pathGroup });
+defineExpose(pathGroup);
 </script>
 
 <template />

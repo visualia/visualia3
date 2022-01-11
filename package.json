@@ -45,6 +45,7 @@
     "prepublish": "vitest --run && npm run build && vue-tsc --declaration --emitDeclarationOnly"
   },
   "dependencies": {
+    "@vueuse/core": "^7.5.3",
     "katex": "^0.15.1",
     "pdf-lib": "^1.17.1",
     "svgpath": "^2.4.0",

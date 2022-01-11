@@ -21,17 +21,20 @@ const {
   material = new MeshBasicMaterial({ color: "red" }),
 } = defineProps<Props>();
 
+const mesh = new Mesh(geometry, material);
+
 watch(
   () => scene,
   () => {
     if (scene) {
-      const cube = new Mesh(geometry, material);
-      scene.add(cube);
+      scene.add(mesh);
       update();
     }
   },
   { immediate: true }
 );
+
+defineExpose({ mesh });
 </script>
 
 <template />
