@@ -1,24 +1,16 @@
 <script lang="ts" setup>
-import {
-  watch,
-  ref,
-  onMounted,
-  defineProps,
-  onBeforeUpdate,
-  provide,
-} from "vue";
+import { ref, onMounted, defineProps, onBeforeUpdate, provide } from "vue";
 
-import {
-  Scene,
-  PerspectiveCamera,
-  WebGLRenderer,
-  BoxGeometry,
-  MeshBasicMaterial,
-  Mesh,
-} from "three";
+import { Scene, PerspectiveCamera, WebGLRenderer, Group } from "three";
 
-import { SVGRenderer } from "three/examples/jsm/renderers/SVGRenderer";
+//import { SVGRenderer } from "three/examples/jsm/renderers/SVGRenderer";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+
+export type Context = {
+  scene: Scene | Group;
+  update: Function;
+  transforms: string[];
+};
 
 const props = defineProps({ a: { type: Number, default: 1 } });
 
@@ -40,13 +32,9 @@ renderer.setPixelRatio(2);
 
 renderer.setSize(width, height);
 
-const update = () => renderer.render(scene, camera);
-
-// watch(
-//   () => props.a,
-//   () => cube.rotateZ(props.a / 5000),
-//   { immediate: true }
-// );
+const update = () => {
+  renderer.render(scene, camera);
+};
 
 //@ts-ignore
 const controls = new OrbitControls(camera, renderer.domElement);
@@ -62,7 +50,12 @@ onBeforeUpdate(() => {
   update();
 });
 
-provide("context", { scene, update });
+const context: Context = {
+  scene,
+  update,
+  transforms: [],
+};
+provide("context", context);
 </script>
 
 <template>

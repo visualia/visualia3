@@ -6,19 +6,25 @@ import {
   Group,
   DoubleSide,
   ShapeGeometry,
+  Material,
 } from "three";
 import { SVGLoader } from "three/examples/jsm/loaders/SVGLoader";
 import { circlepath } from "../utils";
+import { Context } from "./VThree.vue";
 
-const context = inject("context", { scene: null, update: () => {} });
+const { scene, update } = inject("context") as Context;
 
 type Props = {
   path: string;
+  material?: Material;
 };
 
-const { path } = defineProps<Props>();
+const {
+  path,
+  material = new MeshBasicMaterial({ color: "black", side: DoubleSide }),
+} = defineProps<Props>();
 
-function createPath(path: string): Group {
+function createPathGroup(path: string): Group {
   const svg = `<path d="${path}"></path>`;
 
   const loader = new SVGLoader();
@@ -29,12 +35,6 @@ function createPath(path: string): Group {
 
   for (let i = 0; i < paths.length; i++) {
     const path = paths[i];
-
-    const material = new MeshBasicMaterial({
-      color: "red",
-      side: DoubleSide,
-      depthWrite: false,
-    });
 
     const shapes = SVGLoader.createShapes(path);
 
@@ -48,20 +48,20 @@ function createPath(path: string): Group {
   return group;
 }
 
-// defineExpose({ group })
+const pathGroup = createPathGroup(path);
 
 watch(
-  () => context.scene,
+  () => scene,
   () => {
-    if (context.scene) {
-      const pathGroup = createPath(path);
-      // @ts-ignore
-      context.scene.add(pathGroup);
-      context.update();
+    if (scene) {
+      scene.add(pathGroup);
+      update();
     }
   },
   { immediate: true }
 );
+
+defineExpose({ pathGroup });
 </script>
 
 <template />

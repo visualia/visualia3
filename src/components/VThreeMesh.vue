@@ -1,24 +1,33 @@
 <script setup lang="ts">
-import { BoxGeometry, MeshBasicMaterial, Mesh, BufferGeometry } from "three";
+import {
+  BoxGeometry,
+  MeshBasicMaterial,
+  Mesh,
+  BufferGeometry,
+  Material,
+} from "three";
 import { inject, watch } from "vue";
+import type { Context } from "./VThree.vue";
 
-const context = inject("context", { scene: null });
+const { scene, update } = inject("context") as Context;
 
 type Props = {
   geometry?: BufferGeometry;
+  material?: Material;
 };
 
-const { geometry = new BoxGeometry(10, 10, 10) } = defineProps<Props>();
+const {
+  geometry = new BoxGeometry(10, 10, 10),
+  material = new MeshBasicMaterial({ color: "red" }),
+} = defineProps<Props>();
 
 watch(
-  () => context.scene,
+  () => scene,
   () => {
-    if (context.scene) {
-      //const geometry = new BoxGeometry(20, 20, 20);
-      const material = new MeshBasicMaterial({ color: "blue" });
+    if (scene) {
       const cube = new Mesh(geometry, material);
-      // @ts-ignore
-      context.scene.add(cube);
+      scene.add(cube);
+      update();
     }
   },
   { immediate: true }
