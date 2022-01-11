@@ -3,29 +3,23 @@ import { createMarkdownRenderer, defineConfig } from "vitepress";
 function VisualiaMarkdownIt(md) {
   const defaultFence = md.renderer.rules.fence;
   const mdRenderer = createMarkdownRenderer("");
+
   md.renderer.rules.fence = function () {
     const [tokens, idx, _options, _env, _slf] = arguments;
     const info = tokens[idx].info.trim();
     if (info === "md") {
-      const { html } = mdRenderer.render(tokens[idx].content || "");
+      // We remove the 4+ space indents to avoid
+      // Markdown code formatting inside indented
+      // HTML/Vue blocks
+      const { html } = mdRenderer.render(
+        tokens[idx].content.replace(/ {4,}/g, "") || ""
+      );
       return `
         ${defaultFence(...arguments)}
         ${html}
       `;
     }
     return defaultFence(...arguments);
-  };
-
-  const defaultHtmlBlock = md.renderer.rules.html_block;
-
-  md.renderer.rules.html_block = function () {
-    const [tokens, idx, _options, _env, _slf] = arguments;
-
-    // return String(tokens[idx].content).startsWith("<v-")
-    //   ? `<p>${defaultHtmlBlock(...arguments)}</p>`
-    //   : defaultHtmlBlock(...arguments);
-
-    return defaultHtmlBlock(...arguments);
   };
 
   return md;
@@ -37,7 +31,9 @@ export default defineConfig({
   markdown: {
     //@ts-ignore
     breaks: true,
-    config: (md) => md.use(VisualiaMarkdownIt),
+    config: (md) => {
+      md.use(VisualiaMarkdownIt);
+    },
   },
   themeConfig: {
     repo: "visualia/visualia3",
@@ -106,6 +102,10 @@ export default defineConfig({
             {
               text: "v-pdf",
               link: "/components/v-pdf",
+            },
+            {
+              text: "v-three",
+              link: "/components/v-three",
             },
           ],
         },
