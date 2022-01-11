@@ -1,22 +1,27 @@
 <script setup lang="ts">
-//@ts-nocheck
-import { inject, useSlots, watch } from "vue";
+import { Group } from "three";
+import { inject, provide, useSlots, watch } from "vue";
 import type { Context } from "./VThree.vue";
 
 const slots = useSlots();
 
-const { update } = inject("context") as Context;
+const { scene, update } = inject("context") as Context;
+const mesh = new Group();
+scene.add(mesh);
+provide("context", { scene: mesh, update });
 
 if (slots && slots.default) {
   watch(
-    () => slots.default(),
+    () => slots.default?.(),
     () => {
       update();
     },
     { immediate: true }
   );
 }
+defineExpose({ mesh, update });
 </script>
+
 <template>
   <slot />
 </template>
