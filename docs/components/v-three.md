@@ -3,9 +3,10 @@
   import { BoxGeometry } from 'three'
   const mesh = $ref()
   const x = $ref(0)
-  watch(() => x, () => 
-    mesh.rotation.z = x / 360 * Math.PI
-  )
+  watch(() => x, () => {
+    mesh.mesh.rotation.z = x / 360 * Math.PI;
+    mesh.update();
+  })
 </script>
 
 # v-three
@@ -17,7 +18,8 @@
   const mesh = $ref()
   const x = $ref(0)
   watch(() => x, () => 
-    mesh.rotation.z = x / 360 * Math.PI
+    mesh.mesh.rotation.z = x / 360 * Math.PI
+    mesh.update();
   )
 </script>
 

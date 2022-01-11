@@ -3,7 +3,6 @@ import { ref, onMounted, defineProps, onBeforeUpdate, provide } from "vue";
 import { Scene, PerspectiveCamera, WebGLRenderer, Group } from "three";
 //import { SVGRenderer } from "three/examples/jsm/renderers/SVGRenderer";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import { useRafFn } from "@vueuse/core";
 
 export type Context = {
   scene: Scene | Group;
@@ -55,8 +54,6 @@ const context: Context = {
   transforms: [],
 };
 provide("context", context);
-
-useRafFn(update);
 </script>
 
 <template>
