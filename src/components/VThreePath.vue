@@ -48,20 +48,20 @@ function createPathGroup(path: string): Group {
   return group;
 }
 
-const pathGroup = createPathGroup(path);
+const mesh = createPathGroup(path);
 
 watch(
   () => scene,
   () => {
     if (scene) {
-      scene.add(pathGroup);
+      scene.add(mesh);
       update();
     }
   },
   { immediate: true }
 );
 
-defineExpose(pathGroup);
+defineExpose({ mesh, update });
 </script>
 
 <template />
