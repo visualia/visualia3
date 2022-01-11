@@ -34,7 +34,7 @@ watch(
   { immediate: true }
 );
 
-defineExpose({ mesh });
+defineExpose(mesh);
 </script>
 
 <template />
