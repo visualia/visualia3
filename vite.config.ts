@@ -1,6 +1,10 @@
+import path from "path";
 import { BuildOptions, defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import path from "path";
+import pages from "vite-plugin-pages";
+import markdown from "vite-plugin-md";
+import matter from "gray-matter";
+import fs from "fs";
 
 const build: Record<string, BuildOptions> = {
   production: null,
@@ -51,7 +55,22 @@ const build: Record<string, BuildOptions> = {
 
 export default defineConfig(({ mode }) => {
   return {
-    plugins: [vue({ reactivityTransform: true })],
+    plugins: [
+      vue({ reactivityTransform: true, include: [/\.vue$/, /\.md$/] }),
+      pages({
+        extensions: ["vue", "md"],
+        dirs: "docs2",
+        exclude: ["**/components/*.vue"],
+        extendRoute(route) {
+          const routePath = path.resolve(__dirname, route.component.slice(1));
+          const md = fs.readFileSync(routePath, "utf-8");
+          const { data } = matter(md);
+          route.meta = Object.assign(route.meta || {}, { frontmatter: data });
+          return route;
+        },
+      }),
+      markdown(),
+    ],
     build: build[mode],
   };
 });
