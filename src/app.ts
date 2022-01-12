@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import routes from "virtual:generated-pages";
 import App from "./App.vue";
 import { Visualia } from "./lib.es";
+import "./app.css";
 
 const router = createRouter({
   history: createWebHistory(),
