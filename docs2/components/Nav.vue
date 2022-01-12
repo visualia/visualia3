@@ -1,21 +1,20 @@
 <script setup lang="ts">
-import routes from "virtual:generated-pages";
-const sidebar = [
-  {
-    text: "Introduction",
-    link: "/",
-  },
-  {
-    text: "Get Started",
-    children: [
-      { text: "Vite", link: "guide/get-started/vite" },
-      { text: "Vitepress", link: "guide/get-started/vitepress" },
-    ],
-  },
-];
+import { sidebar } from "../config";
 </script>
 <template>
-  <router-link to="/">/index</router-link> |
-  <router-link to="/bla">/bla</router-link>
-  <pre>{{ sidebar }}</pre>
+  <ul v-for="link in sidebar">
+    <li>
+      <router-link v-if="link.link && !link.children" :to="link.link">{{
+        link.text
+      }}</router-link>
+      <div v-if="!link.link">{{ link.text }}</div>
+      <template v-if="link.children">
+        <ul>
+          <li v-for="child in link.children">
+            <router-link :to="child.link">{{ child.text }}</router-link>
+          </li>
+        </ul>
+      </template>
+    </li>
+  </ul>
 </template>
