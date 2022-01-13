@@ -1,3 +1,3 @@
 # Visualia
 
-Create interactive learning experiences in the browser
+> Create interactive learning experiences in the browser

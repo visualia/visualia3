@@ -2,23 +2,28 @@
 import { sidebar } from "../../docs2/config";
 </script>
 <template>
-  <nav>
+  <nav class="leading-8 text-gray-600">
     <ul v-for="link in sidebar">
       <li>
         <router-link
           v-if="link.link && !link.children"
           :to="link.link"
-          active-class="font-bold"
-          >{{ link.text }}</router-link
+          class="font-medium"
+          active-class="text-sky-600 underline underline-offset-2"
         >
-        <div v-if="!link.link">{{ link.text }}</div>
-        <template v-if="link.children">
-          <ul>
-            <li v-for="child in link.children">
-              <router-link :to="child.link">{{ child.text }}</router-link>
-            </li>
-          </ul>
-        </template>
+          {{ link.text }}
+        </router-link>
+        <div v-if="!link.link" class="font-bold">{{ link.text }}</div>
+        <ul v-if="link.children" class="pl-4">
+          <li v-for="child in link.children">
+            <router-link
+              :to="child.link"
+              active-class="text-sky-600 underline underline-offset-2"
+            >
+              {{ child.text }}
+            </router-link>
+          </li>
+        </ul>
       </li>
     </ul>
   </nav>

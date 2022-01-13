@@ -1,10 +1,11 @@
+import fs from "fs";
 import path from "path";
 import { BuildOptions, defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import pages from "vite-plugin-pages";
 import markdown from "vite-plugin-md";
 import matter from "gray-matter";
-import fs from "fs";
+import ViteFonts from "vite-plugin-fonts";
 
 const build: Record<string, BuildOptions> = {
   production: null,
@@ -70,6 +71,18 @@ export default defineConfig(({ mode }) => {
         },
       }),
       markdown(),
+      //@ts-ignore
+      ViteFonts.default({
+        google: {
+          families: [
+            {
+              name: "IBM Plex Sans",
+              styles: "ital,wght@0,400;0,500;0,700;1,400;1,500;1,700",
+            },
+            { name: "Cousine" },
+          ],
+        },
+      }),
     ],
     build: build[mode],
   };
