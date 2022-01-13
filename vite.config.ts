@@ -59,11 +59,11 @@ function LiveCode(md) {
   md.renderer.rules.fence = function () {
     const [tokens, idx, _options, _env, _slf] = arguments;
     const info = tokens[idx].info.trim();
-    const html = md.render(tokens[idx].content);
+    //const content = md.render(tokens[idx].content);
     if (info === "md") {
       return `
         ${defaultFence(...arguments)}
-        ${html}
+        <v-editor content='${tokens[idx].content}' />
       `;
     }
     return defaultFence(...arguments);
@@ -74,6 +74,11 @@ function LiveCode(md) {
 
 export default defineConfig(({ mode }) => {
   return {
+    resolve: {
+      alias: {
+        vue: "vue/dist/vue.esm-bundler.js",
+      },
+    },
     plugins: [
       vue({ reactivityTransform: true, include: [/\.vue$/, /\.md$/] }),
       pages({

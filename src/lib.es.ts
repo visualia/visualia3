@@ -4,6 +4,7 @@ import { defineAsyncComponent, Plugin } from "vue";
 export const components = import.meta.glob("./components/*.vue");
 
 import * as utils from "./utils";
+export { utils };
 export * from "./utils";
 
 export const Visualia: Plugin = {
