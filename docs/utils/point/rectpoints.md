@@ -19,21 +19,19 @@ function rectpoints(
 ## Usage
 
 ```md
-`{{ rectpoints(10, 20, 30, 40)}}`
+{{ rectpoints(50, 50, 50, 50)}}
 ```
 
 ## Example
 
 ```md
-<svg width="100" height="100">
+<svg>
   <circle
-    v-for="point in rectpoints(10, 20, 30, 40)"
+    v-for="point in rectpoints(50, 50, 50, 50)"
     :cx="point.x"
     :cy="point.y"
-    r="5"
-    stroke="red"
-    fill="none"
+    r="25"
+    fill="skyblue"
   />
-  <rect x="10" y="20" width="30" height="40" stroke="black" fill="none" />
 </svg>
 ```

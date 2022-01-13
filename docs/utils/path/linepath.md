@@ -16,17 +16,17 @@ function linepath(points: Point[], closed: boolean = false): string;
 ## Usage
 
 ```md
-`{{ linepath([{ x: 0, y: 0 }, { x: 100, y: 100 }]) }}`
+{{ linepath([{ x: 0, y: 0 }, { x: 100, y: 100 }]) }}
 ```
 
 ```md
-`{{ linepath([{ x: 0, y: 0 }, { x: 100, y: 100 }], closed = true) }}`
+{{ linepath([{ x: 0, y: 0 }, { x: 100, y: 100 }], closed = true) }}
 ```
 
 ## Example
 
 ```md
-<svg width="100" height="100">
-  <path :d="linepath([{ x: 0, y: 0 }, { x: 100, y: 100 }])" stroke="black" />
+<svg>
+  <path :d="linepath([{ x: 0, y: 0 }, { x: 100, y: 100 }])" stroke="skyblue" stroke-width="2" />
 </svg>
 ```

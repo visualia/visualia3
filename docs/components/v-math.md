@@ -7,24 +7,16 @@ v-math displays mathematical expressions.
 Here are some simple math expressions:
 
 ```md
-> <v-math>a = 100 \\\\ b = \frac{a}{10} = 10</v-math>
+<v-math>a = \frac{1}{10}</v-math>
 ```
-
-`@TODO` Multi-line
-
-## With global variable
 
 Lets assign <v-math>a</v-math> to a global variable `v.a` and use `<v-slider />` to control it.
 
 ```md
-> <v-math>a = {{ v.a }} \\\\ b = \frac{ {{ v.a }} }{10} = {{ v.a / 10 }}</v-math>
+<v-math>a = \frac{ {{ v.a }} }{10} = {{ v.a / 10 }}</v-math>
 
 <v-slider v-model="v.a" />
 ```
-
-## With local variable
-
-`@TODO`
 
 ## Syntax reference
 

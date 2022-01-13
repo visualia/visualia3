@@ -9,14 +9,14 @@ function circlepath(x: number, y: number, r: number): string;
 ## Usage
 
 ```md
-`{{ circlepath(50,50,25) }}`
+{{ circlepath(50,50,25) }}
 ```
 
 ## Example
 
 ```md
-<svg width="100" height="100">
-  <path :d="circlepath(30,50,25)" fill="none" stroke="red" />
-  <circle cx="60" cy="50" r="25" fill="none" stroke="black" />
+<svg>
+  <circle cx="50" cy="75" r="25" />
+  <path :d="circlepath(100,75,25)" fill="skyblue" />
 </svg>
 ```

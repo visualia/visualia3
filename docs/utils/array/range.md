@@ -11,28 +11,20 @@ export function range(from: number, to: number, step: number = 1): number[];
 Generate array of numbers from `1` to `3`:
 
 ```md
-`{{ range(1,3) }}`
+{{ range(1,3) }}
 ```
 
 Generate array of numbers from `1` to `3` with step of `0.5`:
 
 ```md
-`{{ range(1,3,0.5) }}`
+{{ range(1,3,0.5) }}
 ```
 
 Generate array of numbers from `3` to `1`, in ascending order:
 
 ```md
-`{{ range(3,1) }}`
+{{ range(3,1) }}
 ```
-
-## Advanced usage
-
-`@TODO Array methods, including .map`
-
-## Examples
-
-`@TODO Visual examples`
 
 ## Prior art
 

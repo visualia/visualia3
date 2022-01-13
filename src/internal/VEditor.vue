@@ -33,7 +33,7 @@ onMounted(() => {
       v-model="content"
       class="outline-none w-full font-mono text-sm whitespace-pre bg-gray-800 text-gray-100 p-4 lg:p-7 leading-6"
     />
-    <div class="p-4 lg:p-6">
+    <div class="p-4 lg:p-6 overflow-x-auto">
       <VCompiler :content="outputContent" />
     </div>
   </div>
