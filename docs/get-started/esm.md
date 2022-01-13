@@ -1,10 +1,10 @@
 # Javascript module in HTML
 
-The most bare-bones way to use Visualia is to import VueJS and Visualia into a single HTML file.
+The most bare-bones way to use Fachwerk is to import VueJS and Fachwerk into a single HTML file.
 
 By using [ESM imports](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) and [import maps](https://github.com/WICG/import-maps) we can get the modular Javascript workflow in the browser without any tooling or build steps.
 
-Visualia provides ESM-compatible CDN build in https://unpkg.com/visualia3/dist/visualia.js (and also in https://esm.sh/visualia3 and https://cdn.skypack.dev/visualia3).
+Fachwerk provides ESM-compatible CDN build in https://unpkg.com/fachwerk/dist/fachwerk.js (and also in https://esm.sh/fachwerk and https://cdn.skypack.dev/fachwerk).
 
 ```html
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ Visualia provides ESM-compatible CDN build in https://unpkg.com/visualia3/dist/v
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://unpkg.com/visualia3/dist/style.css" rel="stylesheet" />
+    <link href="https://unpkg.com/fachwerk/dist/style.css" rel="stylesheet" />
     <style>
       body {
         margin: 0;
@@ -27,14 +27,14 @@ Visualia provides ESM-compatible CDN build in https://unpkg.com/visualia3/dist/v
       {
         "imports": {
           "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.prod.js",
-          "visualia": "https://unpkg.com/visualia3/dist/visualia.js",
+          "fachwerk": "https://unpkg.com/fachwerk/dist/fachwerk.js",
           "marked": "https://unpkg.com/marked/lib/marked.esm.js"
         }
       }
     </script>
     <script type="module">
       import { createApp, ref } from "vue";
-      import { Visualia } from "visualia";
+      import { Fachwerk } from "fachwerk";
       import { parse } from "marked";
 
       const App = {
@@ -43,24 +43,24 @@ Visualia provides ESM-compatible CDN build in https://unpkg.com/visualia3/dist/v
           return { x };
         },
         template: parse(`
-# Hello Visualia
+# Hello Fachwerk
 
 ## Local variable
 
-<v-slider v-model="x" />
+<f-slider v-model="x" />
 
-<v-math>x = {{ x }}</v-math>
+<f-math>x = {{ x }}</f-math>
 
 ## Global variable
 
-<v-slider v-model="v.x" />
+<f-slider v-model="v.x" />
 
-<v-math>x = {{ v.x }}</v-math>
+<f-math>x = {{ v.x }}</f-math>
         `),
       };
 
       const app = createApp(App);
-      app.use(Visualia);
+      app.use(Fachwerk);
       app.mount("#app");
     </script>
   </body>

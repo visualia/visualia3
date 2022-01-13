@@ -1,48 +1,48 @@
-# Vitepress and Visualia
+# Vitepress and Fachwerk
 
-There are several ways to get started with Vitepress and Visualia:
+There are several ways to get started with Vitepress and Fachwerk:
 
 ### 🅐 Use Slackblitz
 
-[![](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/visualia/visualia-vitepress?file=docs%2Findex.md)
+[![](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/fachwerkdev/fachwerk-vitepress?file=docs%2Findex.md)
 
-Open Vitepress + Visualia sample project in Stackblitz and start editing the project right in the browser.
+Open Vitepress + Fachwerk sample project in Stackblitz and start editing the project right in the browser.
 
 ### 🅑 Use Github template
 
-[Clone](https://github.com/visualia/visualia-vitepress/generate) the Github template project [visualia/visualia-vitepress](https://github.com/visualia/visualia-vitepress)
+[Clone](https://github.com/fachwerkdev/fachwerk-vitepress/generate) the Github template project [fachwerkdev/fachwerk-vitepress](https://github.com/fachwerkdev/fachwerk-vitepress)
 
 ### 🅒 Use the command line
 
 Run the following commands:
 
 ```bash
-npx degit visualia/visualia-vitepress
+npx degit fachwerkdev/fachwerk-vitepress
 npm install
 npm run dev
 ```
 
 ### 🅓 Modify existing Vitepress installation
 
-It is easy to modify Vitepress installation to support Visualia. First, install Visualia:
+It is easy to modify Vitepress installation to support Fachwerk. First, install Fachwerk:
 
 ```bash
-npm install visualia3
+npm install fachwerk
 ```
 
-Then, edit `config.js` as follows to install Visualia plugin for Vue and import the Visualia styles:
+Then, edit `config.js` as follows to install Fachwerk plugin for Vue and import the Fachwerk styles:
 
 ```js{4-5,10}
 // ./docs/.vitepress/theme/index.js
 
 import DefaultTheme from "vitepress/theme";
-import { Visualia } from "visualia3";
-import "visualia3/style.css";
+import { Fachwerk } from "fachwerk";
+import "fachwerk/style.css";
 
 export default {
   ...DefaultTheme,
   enhanceApp({ app }) {
-    app.use(Visualia);
+    app.use(Fachwerk);
   },
 };
 ```
@@ -65,8 +65,8 @@ export default defineConfig({
 
 :::info
 
-Reactivity transforms are not _required_ to use Visualia, but a lot of documentation refers to this syntax.
+Reactivity transforms are not _required_ to use Fachwerk, but a lot of documentation refers to this syntax.
 
 :::
 
-You can now start to use Visualia components, utility functions and state in your Markup documents.
+You can now start to use Fachwerk components, utility functions and state in your Markup documents.

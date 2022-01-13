@@ -7,7 +7,7 @@ import * as utils from "./utils";
 export { utils };
 export * from "./utils";
 
-export const Visualia: Plugin = {
+export const Fachwerk: Plugin = {
   install: (app) => {
     Object.entries(components).forEach(([path, component]) => {
       const name = path.split("/").slice(-1)[0].replace(".vue", "");

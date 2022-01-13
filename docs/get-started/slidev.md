@@ -1,18 +1,18 @@
-# Slidev and Visualia
+# Slidev and Fachwerk
 
 ### Setup
 
-To use Visualia components and utility function with [Slidev](https://sli.dev/), you will need to add a `/setup/main.ts` configuration file:
+To use Fachwerk components and utility function with [Slidev](https://sli.dev/), you will need to add a `/setup/main.ts` configuration file:
 
 ```ts
 // /setup/main.ts
 
 import { defineAppSetup } from "@slidev/types";
-import { Visualia } from "visualia3";
-import "visualia3/style.css";
+import { Fachwerk } from "fachwerk";
+import "fachwerk/style.css";
 
 export default defineAppSetup(({ app }) => {
-  app.use(Visualia);
+  app.use(Fachwerk);
 });
 ```
 
@@ -32,24 +32,24 @@ export default defineConfig({
 });
 ```
 
-You can now start editing `/slides.md` and add Visualia components and utilities there.
+You can now start editing `/slides.md` and add Fachwerk components and utilities there.
 
 ### Note on math expressions
 
-Slidev has a built-in support for KaTex-based math expression, very similar to Visualia with one key difference: **Visualia's `<v-math>` component allows to use reactive variables inside math expressions** while Slidev math is just static.
+Slidev has a built-in support for KaTex-based math expression, very similar to Fachwerk with one key difference: **Fachwerk's `<f-math>` component allows to use reactive variables inside math expressions** while Slidev math is just static.
 
 Here is an example to illustrate the difference:
 
 ```html
-<v-slider v-model="v.x" />
+<f-slider v-model="v.x" />
 
-Visualia: <v-math>x = {{ v.x }}</v-math>
+Fachwerk: <f-math>x = {{ v.x }}</f-math>
 
 Slidev: $x = {{ v.x }}$
 ```
 
-<v-slider v-model="v.x" />
+<f-slider v-model="v.x" />
 
-Visualia: <v-math>x = {{ v.x }}</v-math>
+Fachwerk: <f-math>x = {{ v.x }}</f-math>
 
-Slidev: <v-math>x = v.x </v-math>
+Slidev: <f-math>x = v.x </f-math>

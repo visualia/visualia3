@@ -8,16 +8,18 @@ import matter from "gray-matter";
 import ViteFonts from "vite-plugin-fonts";
 
 const build: Record<string, BuildOptions> = {
-  production: null,
+  production: {
+    outDir: "dist/docs",
+  },
   es: {
     emptyOutDir: false,
     lib: {
       formats: ["es"],
       entry: path.resolve(__dirname, "src/lib.es.ts"),
-      name: "visualia",
+      name: "fachwerk",
       fileName: (format) => {
         return {
-          es: "visualia.js",
+          es: "fachwerk.mjs",
         }[format];
       },
     },
@@ -35,11 +37,11 @@ const build: Record<string, BuildOptions> = {
     lib: {
       formats: ["cjs", "umd"],
       entry: path.resolve(__dirname, "src/lib.cjs.ts"),
-      name: "visualia",
+      name: "fachwerk",
       fileName: (format) => {
         return {
-          cjs: "visualia.cjs",
-          umd: "visualia.umd.js",
+          cjs: "fachwerk.cjs",
+          umd: "fachwerk.js",
         }[format];
       },
     },
@@ -72,6 +74,7 @@ function LiveCode(md) {
 
 export default defineConfig(({ mode }) => {
   return {
+    outDir: "dist/docs",
     resolve: {
       alias: {
         vue: "vue/dist/vue.esm-bundler.js",

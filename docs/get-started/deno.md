@@ -1,13 +1,13 @@
-# Deno and Visualia
+# Deno and Fachwerk
 
-For Deno, it is recommended to use Visualia's Typescript-based source files.
+For Deno, it is recommended to use Fachwerk's Typescript-based source files.
 
 Create `index.ts` as follows:
 
 ```ts
 // index.ts
 
-import { hsl } from "https://unpkg.com/visualia3/src/utils/color.ts";
+import { hsl } from "https://unpkg.com/fachwerk/src/utils/color.ts";
 console.log(hsl(10));
 ```
 

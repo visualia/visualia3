@@ -1,12 +1,12 @@
-# v-pdf
+# f-pdf
 
 ```md
-<v-pdf>
-  <v-pdf-path
+<f-pdf>
+  <f-pdf-path
     :path="linepath(rectpoints(0, 0, 100, 100), true)" transform="translate(10,10)"
   />
-   <v-pdf-path
+   <f-pdf-path
     :path="circlepath(0,0,50)"
   />
-</v-pdf>
+</f-pdf>
 ```

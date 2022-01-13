@@ -1,21 +1,21 @@
-# v-math
+# f-math
 
-v-math displays mathematical expressions.
+f-math displays mathematical expressions.
 
 ## Usage
 
 Here are some simple math expressions:
 
 ```md
-<v-math>a = \frac{1}{10}</v-math>
+<f-math>a = \frac{1}{10}</f-math>
 ```
 
-Lets assign <v-math>a</v-math> to a global variable `v.a` and use `<v-slider />` to control it.
+Lets assign <f-math>a</f-math> to a global variable `v.a` and use `<f-slider />` to control it.
 
 ```md
-<v-math>a = \frac{ {{ v.a }} }{10} = {{ v.a / 10 }}</v-math>
+<f-math>a = \frac{ {{ v.a }} }{10} = {{ v.a / 10 }}</f-math>
 
-<v-slider v-model="v.a" />
+<f-slider v-model="v.a" />
 ```
 
 ## Syntax reference
@@ -28,4 +28,4 @@ https://en.wikibooks.org/wiki/LaTeX/Mathematics
 ## Prior art
 
 https://designstem.github.io/fachwerk/docs/#/f-math
-https://visualia.github.io/visualia_original/#math
+https://fachwerk.github.io/fachwerk_original/#math

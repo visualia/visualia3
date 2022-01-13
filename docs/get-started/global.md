@@ -1,8 +1,8 @@
 # Global Javascript in HTML
 
-For "classic" Javascript usage Visualia also provides a globally loadable UMD package https://unpkg.com/visualia3/dist/visualia.umd.js
+For "classic" Javascript usage Fachwerk also provides a globally loadable UMD package https://unpkg.com/fachwerk/dist/fachwerk.umd.js
 
-This allows simply to open the local HTML file in the browser and start exploring Visualia.
+This allows simply to open the local HTML file in the browser and start exploring Fachwerk.
 
 ```html
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ This allows simply to open the local HTML file in the browser and start explorin
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://unpkg.com/visualia3/dist/style.css" rel="stylesheet" />
+    <link href="https://unpkg.com/fachwerk/dist/style.css" rel="stylesheet" />
     <style>
       body {
         margin: 0;
@@ -22,11 +22,11 @@ This allows simply to open the local HTML file in the browser and start explorin
   <body>
     <div id="app"></div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-    <script src="https://unpkg.com/visualia3/dist/visualia.umd.js"></script>
+    <script src="https://unpkg.com/fachwerk/dist/fachwerk.umd.js"></script>
     <script src="https://unpkg.com/marked/lib/marked.umd.js"></script>
     <script>
       const { createApp, ref } = Vue;
-      const { Visualia } = visualia;
+      const { Fachwerk } = fachwerk;
       const { parse } = marked;
 
       const App = {
@@ -35,24 +35,24 @@ This allows simply to open the local HTML file in the browser and start explorin
           return { x };
         },
         template: parse(`
-# Hello Visualia
+# Hello Fachwerk
 
 ## Local variable
 
-<v-slider v-model="x" />
+<f-slider v-model="x" />
 
-<v-math>x = {{ x }}</v-math>
+<f-math>x = {{ x }}</f-math>
 
 ## Global variable
 
-<v-slider v-model="v.x" />
+<f-slider v-model="v.x" />
 
-<v-math>x = {{ v.x }}</v-math>
+<f-math>x = {{ v.x }}</f-math>
         `),
       };
 
       const app = createApp(App);
-      app.use(Visualia);
+      app.use(Fachwerk);
       app.mount("#app");
     </script>
   </body>

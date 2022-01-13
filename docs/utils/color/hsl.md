@@ -20,7 +20,7 @@ You can only set the hue `h` value, the rest will have the default values.
 {{ hsl(10) }}
 ```
 
-> **Not in a spec** > `hsl(hue)` is not part of the official CSS colors specification, it is provided as a convenience feature by Visualia.
+> **Not in a spec** > `hsl(hue)` is not part of the official CSS colors specification, it is provided as a convenience feature by Fachwerk.
 
 ## Examples
 
@@ -106,4 +106,4 @@ Hover or tap over the colors to see how `a` value changes
 
 https://designstem.github.io/fachwerk/docs/#/hsl
 
-https://visualia.github.io/visualia_original/#helper-functions_hsl
+https://fachwerk.github.io/fachwerk_original/#helper-functions_hsl

@@ -1,9 +1,9 @@
-# v-slider
+# f-slider
 
-`<v-slider />` is a component that changes a numeric variable with a slider. It is a lightweight wrapper around `<input type="range" />` HTML element.
+`<f-slider />` is a component that changes a numeric variable with a slider. It is a lightweight wrapper around `<input type="range" />` HTML element.
 
 ```md
-<v-slider v-model="v.x" />
+<f-slider v-model="v.x" />
 
 The value of x is {{ v.x }}
 ```
@@ -20,14 +20,14 @@ You can use that variable to control the SVG `<circle />` position on the page (
 
 ## Setting attributes
 
-Since `<v-slider />` is a lightweight wrapper around `<input type="range" />` so all the [input element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range), including `min`, `max` and `step`.
+Since `<f-slider />` is a lightweight wrapper around `<input type="range" />` so all the [input element attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range), including `min`, `max` and `step`.
 
 ```md
 <svg width="100" height="100">
   <circle :cx="v.x2" cy="50" r="25" />
 </svg>
 
-<v-slider v-model="v.x2" step="50" />
+<f-slider v-model="v.x2" step="50" />
 
 The value of x2 is {{ v.x2 }}
 ```
@@ -39,7 +39,7 @@ Note that step attribute can also be set to `step="any"` that makes slider to em
   <circle :cx="v.x3" cy="50" r="25" />
 </svg>
 
-<v-slider v-model="v.x3" max="400" step="any" />
+<f-slider v-model="v.x3" max="400" step="any" />
 
 The value of x3 is <br /> {{ v.x3 }}
 ```
@@ -47,4 +47,4 @@ The value of x3 is <br /> {{ v.x3 }}
 ## Prior art
 
 https://designstem.github.io/fachwerk/docs/#/f-slider
-https://visualia.github.io/visualia_original/#live-variables_slider
+https://fachwerk.github.io/fachwerk_original/#live-variables_slider

@@ -26,7 +26,7 @@ const context: Context = {
         .then((pdfSrc: string) => (src.value = pdfSrc));
     }
   },
-  transforms: [], // @TODO Allow v-pdf transforms
+  transforms: [], // @TODO Allow f-pdf transforms
 };
 
 const src = ref("");

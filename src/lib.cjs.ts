@@ -6,7 +6,7 @@ export * from "./utils";
 import * as components from "./components";
 export * from "./components";
 
-export const Visualia: Plugin = {
+export const Fachwerk: Plugin = {
   install: (app) => {
     Object.entries(components).forEach(([name, component]) => {
       app.component(
