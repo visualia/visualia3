@@ -60,8 +60,7 @@ export default defineConfig(({ mode }) => {
       vue({ reactivityTransform: true, include: [/\.vue$/, /\.md$/] }),
       pages({
         extensions: ["vue", "md"],
-        dirs: "docs2",
-        exclude: ["**/components/*.vue"],
+        dirs: "docs",
         extendRoute(route) {
           const routePath = path.resolve(__dirname, route.component.slice(1));
           const md = fs.readFileSync(routePath, "utf-8");
@@ -70,7 +69,7 @@ export default defineConfig(({ mode }) => {
           return route;
         },
       }),
-      markdown(),
+      markdown({ markdownItOptions: { typographer: false } }),
       //@ts-ignore
       ViteFonts.default({
         google: {

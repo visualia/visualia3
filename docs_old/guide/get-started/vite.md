@@ -1,6 +1,6 @@
 # Vite and Visualia
 
-There are **multiple ways** _to get started_ with Vite and Visualia:
+There are multiple ways to get started with Vite and Visualia:
 
 ### 🅐 Use Slackblitz
 
