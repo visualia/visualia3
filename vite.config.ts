@@ -59,10 +59,8 @@ function LiveCode(md) {
   md.renderer.rules.fence = function () {
     const [tokens, idx, _options, _env, _slf] = arguments;
     const info = tokens[idx].info.trim();
-    //const content = md.render(tokens[idx].content);
     if (info === "md") {
       return `
-        ${defaultFence(...arguments)}
         <v-editor content='${tokens[idx].content}' />
       `;
     }
@@ -93,7 +91,7 @@ export default defineConfig(({ mode }) => {
         },
       }),
       markdown({
-        markdownItOptions: { typographer: false },
+        markdownItOptions: { typographer: false, breaks: true },
         markdownItSetup: (md) => md.use(LiveCode),
       }),
       //@ts-ignore

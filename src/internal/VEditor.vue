@@ -1,4 +1,5 @@
 <script setup lang="ts">
+//@ts-nocheck
 import { ref, computed, onMounted } from "vue";
 import VCompiler from "./VCompiler.vue";
 import MarkdownIt from "markdown-it";
@@ -24,11 +25,13 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div class="grid grid-cols-2 gap-4">
+  <div
+    class="grid md:grid-cols-2 grid-cols-1 grid-rows-auto shadow-md shadow-gray-100 rounded-md overflow-hidden mb-6"
+  >
     <textarea
       ref="editor"
       v-model="content"
-      class="w-full font-mono text-sm whitespace-pre bg-gray-800 text-gray-100 p-4"
+      class="outline-none w-full font-mono text-sm whitespace-pre bg-gray-800 text-gray-100 p-5 leading-6"
     />
     <div class="p-4">
       <VCompiler :content="outputContent" />
