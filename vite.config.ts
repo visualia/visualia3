@@ -54,6 +54,24 @@ const build: Record<string, BuildOptions> = {
   },
 };
 
+function LiveCode(md) {
+  const defaultFence = md.renderer.rules.fence;
+  md.renderer.rules.fence = function () {
+    const [tokens, idx, _options, _env, _slf] = arguments;
+    const info = tokens[idx].info.trim();
+    const html = md.render(tokens[idx].content);
+    if (info === "md") {
+      return `
+        ${defaultFence(...arguments)}
+        ${html}
+      `;
+    }
+    return defaultFence(...arguments);
+  };
+
+  return md;
+}
+
 export default defineConfig(({ mode }) => {
   return {
     plugins: [
@@ -69,7 +87,10 @@ export default defineConfig(({ mode }) => {
           return route;
         },
       }),
-      markdown({ markdownItOptions: { typographer: false } }),
+      markdown({
+        markdownItOptions: { typographer: false },
+        markdownItSetup: (md) => md.use(LiveCode),
+      }),
       //@ts-ignore
       ViteFonts.default({
         google: {
