@@ -1,4 +1,4 @@
-export { default as VMath } from "./VMath.vue";
-export { default as VPdf } from "./VPdf.vue";
-export { default as VPdfPath } from "./VPdfPath.vue";
-export { default as VSlider } from "./VSlider.vue";
+export { default as FMath } from "./FMath.vue";
+export { default as FPdf } from "./FPdf.vue";
+export { default as FPdfPath } from "./FPdfPath.vue";
+export { default as FSlider } from "./FSlider.vue";

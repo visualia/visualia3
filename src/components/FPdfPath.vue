@@ -2,7 +2,7 @@
 import { ColorTypes } from "pdf-lib";
 import { inject, watch } from "vue";
 import processPath from "svgpath";
-import type { Context } from "./VPdf.vue";
+import type { Context } from "./FPdf.vue";
 
 const { path, transform = "" } = defineProps(["path", "transform"]);
 const context = inject("context") as Context;
