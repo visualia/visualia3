@@ -1,13 +1,15 @@
 # Fachwerk
 
-### Write content
+<p class="lead">Here is a VueJS and Markdown based framework for creating interactive learning materials.</p>
 
-#### Text formatting
+### Declarative delight
 
-Let's start with a text content. Fachwerk is based on Markdown, a simple text format that is automatically converted to HTML.
+Fachwerk is composed of VueJS components that allow to use simple HTML-like tags for complex visualizations.
 
-To format texts, use an asterisk `*` character:
+### Sophisticated state
 
-`*italic*` gives you _italic_
+All elements on the page can talk to the other elements, either via global state for values or with a global event bus for events.
 
-`**bold**` gives you **bold**
+### Useful utilites
+
+There are wide range of JS utility functions available from array manipulations to color calculations.
