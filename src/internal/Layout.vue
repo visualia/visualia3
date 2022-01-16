@@ -6,7 +6,7 @@ import Nav from "./Nav.vue";
 <template>
   <Header />
   <main
-    class="grid md:grid-cols-[200px_1fr] grid-cols-1 grid-rows-[30vh_1fr] md:grid-rows-1 min-h-screen"
+    class="grid md:grid-cols-[250px_1fr] grid-cols-1 grid-rows-[30vh_1fr] md:grid-rows-1 min-h-screen"
   >
     <Nav class="bottom-0 p-4 md:p-8 shadow-xl overflow-auto" />
     <article

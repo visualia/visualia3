@@ -6,10 +6,6 @@ type Link = {
 
 export let sidebar: Link[] = [
   {
-    text: "Introduction",
-    link: "/",
-  },
-  {
     text: "Get Started",
     children: [
       { text: "Vite", link: "/get-started/vite" },
