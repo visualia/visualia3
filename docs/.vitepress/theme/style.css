@@ -1,17 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Cousine&family=IBM+Plex+Sans:wght@400;500;700&display=swap");
 :root {
-  --c-brand: #ef4444;
-  --c-brand-light: #f87171;
+  --darkestgray: #111111;
+  --darkergray: #1a1a1a;
+  --darkgray: #555555;
+  --gray: #aaaaaa;
+  --lightgray: #cccccc;
+  --lightergray: #eee;
+  --lightestgray: #f4f4f4;
+
+  --blue: #1982c4;
+  --lightblue: #d8e6f3;
+
+  --c-brand: var(--blue);
+  --c-brand-light: var(--lightblue);
+  --code-bg-color: var(--darkergray);
+  --font-family-base: "IBM Plex Sans", serif;
+  --code-font-family: "Cousine", serif;
 }
 
 .custom-block {
   border-width: 5px !important;
 }
 
+.nav-bar {
+  --c-bg: var(--darkestgray);
+  --c-text: var(--gray);
+  --c-text-lighter: var(--lightgray);
+}
+.sidebar {
+  border: none !important;
+  box-shadow: 5px 0 10px rgb(0, 0, 0, 5%);
+}
+.sidebar-button svg {
+  color: var(--gray);
+}
+.sidebar-link-item.active {
+  font-weight: 500 !important;
+}
+
+h2 {
+  --c-divider: transparent;
+}
+
+a {
+  font-weight: 500;
+}
+
+.content a {
+  text-decoration: underline;
+  text-underline-offset: 0.1em;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background: var(--darkgray);
+  height: 2px;
+  outline: none;
+  margin: 2em 0;
+  display: block;
+  width: 33%;
+}
 @media (max-width: 800px) {
   input[type="range"] {
     width: 100%;
   }
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border: 2px solid var(--darkgray);
+  border-radius: 1000px;
+  cursor: pointer;
+  background: white;
+}
+
+@media (max-width: 800px) {
   input[type="range"]::-webkit-slider-thumb {
-    transform: scale(1.75);
+    width: 32px;
+    height: 32px;
   }
+}
+
+/**
+ * Nord Theme Originally by Arctic Ice Studio
+ * https://nordtheme.com
+ *
+ * Ported for PrismJS by Zane Hitchcoxc (@zwhitchcox) and Gabriel Ramos (@gabrieluizramos)
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #f8f8f2;
+  background: none;
+  font-family: "Fira Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+    monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #2e3440;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #636f88;
+}
+
+.token.punctuation {
+  color: #81a1c1;
+}
+
+.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #81a1c1;
+}
+
+.token.number {
+  color: #b48ead;
+}
+
+.token.boolean {
+  color: #81a1c1;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #a3be8c;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #81a1c1;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: #88c0d0;
+}
+
+.token.keyword {
+  color: #81a1c1;
+}
+
+.token.regex,
+.token.important {
+  color: #ebcb8b;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token {
+  filter: brightness(115%);
 }

@@ -32,7 +32,7 @@ function VisualiaMarkdownIt(md) {
 }
 
 export default defineConfig({
-  title: "Visualia",
+  title: "Fachwerk",
   vue: { reactivityTransform: true },
   markdown: {
     //@ts-ignore
